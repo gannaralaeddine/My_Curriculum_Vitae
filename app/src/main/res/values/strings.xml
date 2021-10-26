@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyCV</string>
+    <string name="app_name">My CV</string>
     <string name="amazon">AMAZON</string>
     <string name="united_states">UNITED STATES</string>
     <string name="start_date">Start Date</string>
@@ -30,7 +30,6 @@
     <string name="submit">submit</string>
     <string name="info">Info</string>
     <string name="my_career">My career</string>
-
     <string name="description">Par défaut, le fragment « EXPERIENCE »
 s’affiche dans la partie réserver des
 fragments avec un RecyclerView qui gère
@@ -49,9 +48,9 @@ statique.</string>
     <string name="Are_you_sure_you_want_to_logout">Are you sure you want to logout ?</string>
 
     <string name="must_not_be_empty">Must not be empty !</string>
-
-
-
-
+    <string name="name">Name</string>
+    <string name="create_your_resume">Create your resume</string>
+    <string name="your_resume">Your Resume</string>
+    <string name="your_career">Your Career</string>
 
 </resources>

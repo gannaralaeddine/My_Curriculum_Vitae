@@ -27,8 +27,9 @@ class YourResume : AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_your_resume)
 
+// Toolbar Configuration
         val toolbar: Toolbar = findViewById(R.id.toolbar)
-        toolbar.setTitle("Your Resume")
+        toolbar.setTitle(R.string.your_resume)
         setSupportActionBar(toolbar)
 
 

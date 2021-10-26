@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Mon CV</string>
+    <string name="amazon">AMAZON</string>
+    <string name="united_states">UNITED STATES</string>
+    <string name="start_date">Date début</string>
+    <string name="end_date">Date fin</string>
+    <string name="education">Education</string>
+    <string name="experience">Experience</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fullname">Nom et prénom</string>
+    <string name="next">Suivant</string>
+    <string name="gender">Sexe</string>
+    <string name="male">homme</string>
+    <string name="female">femme</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="age">Age</string>
+    <string name="skills">Compétences</string>
+    <string name="language">Langue(s)</string>
+    <string name="english">Anglais</string>
+    <string name="french">Français</string>
+    <string name="arabic">Arabe</string>
+    <string name="hobbies">Passe-temps</string>
+    <string name="music">Musique</string>
+    <string name="sport">Sport</string>
+    <string name="games">Jeux</string>
+    <string name="android">Android</string>
+    <string name="ios">iOS</string>
+    <string name="flutter">Flutter</string>
+    <string name="submit">Envoyer</string>
+    <string name="info">Info</string>
+    <string name="my_career">Ma carrière</string>
+    <string name="description">Par défaut, le fragment « EXPERIENCE »
+s’affiche dans la partie réserver des
+fragments avec un RecyclerView qui gère
+les expériences avec une liste de données
+statique.</string>
+    <string name="logout">Se déconnecté</string>
+    <string name="remember_me">Se souvenir de moi</string>
+    <string name="add_experience">Ajouter Experience</string>
+    <string name="add_education">Ajouter Education</string>
+    <string name="company_name">Nom de la société</string>
+    <string name="company_address">Adresse de la société</string>
+    <string name="save">Valider</string>
+    <string name="logout_canceled">Déconnexion annulée</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="Are_you_sure_you_want_to_logout">Êtes-vous sûr de vouloir vous déconnecter ?</string>
+
+    <string name="must_not_be_empty">Ne doit pas être vide !</string>
+    <string name="name">Name</string>
+    <string name="create_your_resume">Crée votre CV</string>
+    <string name="your_resume">Votre CV</string>
+    <string name="your_career">Votre Carrière</string>
+
+
+</resources>

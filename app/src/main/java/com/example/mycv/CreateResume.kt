@@ -14,7 +14,7 @@ class CreateResume : AppCompatActivity() {
 
 
         val toolbar : Toolbar = findViewById(R.id.toolbar)
-        toolbar.setTitle("Create your resume")
+        toolbar.setTitle(R.string.create_your_resume)
         setSupportActionBar(toolbar)
 
         findViewById<Button>(R.id.btn_createResume_submit).setOnClickListener {

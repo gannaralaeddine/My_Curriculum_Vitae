@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity()
 
 // Toolbar Configuration
         val toolbar: Toolbar = findViewById(R.id.toolbar)
-        toolbar.setTitle("Create your resume")
+        toolbar.setTitle(R.string.create_your_resume)
         setSupportActionBar(toolbar)
 
 // Directly connect if Remember Me is Checked
@@ -79,6 +79,7 @@ class MainActivity : AppCompatActivity()
                 finish()
             }
         }
+
 // Check text input
         editFullname.doOnTextChanged { text, start, before, count ->
             if (text!!.length > 20)
