@@ -22,12 +22,10 @@ class FragmentExperience : Fragment()
         // Inflate the layout for this fragment
         val root = inflater.inflate(R.layout.fragment_experience, container, false)
 
-        experienceList.add(Experience(R.drawable.ic_logo_amazon, "AMAZON", "UNITED STATES", "01/09/2019", "TODAY", getString(R.string.description)))
-        experienceList.add(Experience(R.drawable.ic_logo_esprit, "ESPRIT", "TUNISIA", "01/09/2013", "31/08/2015", getString(R.string.description)))
-        experienceList.add(Experience(R.drawable.ic_logo_facebook, "FACEBOOK", "FRANCE", "01/09/2018", "31/08/2019", getString(R.string.description)))
-        experienceList.add(Experience(R.drawable.ic_logo_microsoft, "MICROSOFT", "UNITED KINGDOM", "01/09/2015", "31/08/2016", getString(R.string.description)))
-
-
+//        experienceList.add(Experience(R.drawable.ic_logo_amazon, "AMAZON", "UNITED STATES", "01/09/2019", "TODAY", getString(R.string.description)))
+//        experienceList.add(Experience(R.drawable.ic_logo_esprit, "ESPRIT", "TUNISIA", "01/09/2013", "31/08/2015", getString(R.string.description)))
+//        experienceList.add(Experience(R.drawable.ic_logo_facebook, "FACEBOOK", "FRANCE", "01/09/2018", "31/08/2019", getString(R.string.description)))
+//        experienceList.add(Experience(R.drawable.ic_logo_microsoft, "MICROSOFT", "UNITED KINGDOM", "01/09/2015", "31/08/2016", getString(R.string.description)))
 
         val recycler = root.findViewById<RecyclerView>(R.id.recyclerview_experience)
 

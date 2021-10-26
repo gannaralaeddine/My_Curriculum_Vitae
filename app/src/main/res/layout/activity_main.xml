@@ -17,56 +17,76 @@
             app:layout_constraintEnd_toStartOf="parent" />
 
         <ImageView
+            android:id="@+id/main_profileimage"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_account" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/main_txtinput_fullname"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-
+            app:errorEnabled="true"
             android:hint="@string/fullname"
-            app:endIconMode="clear_text">
+            app:endIconMode="clear_text"
+            app:counterEnabled="true"
+            app:counterMaxLength="20">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/main_fullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_account"
-                android:drawablePadding="10dp" />
+                android:drawablePadding="10dp"
+                android:maxLength="21"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/main_txtinput_email"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            app:errorEnabled="true"
             android:hint="@string/e_mail"
-            app:endIconMode="clear_text">
+            app:endIconMode="clear_text"
+            app:counterEnabled="true"
+            app:counterMaxLength="30">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/main_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_email"
-                android:drawablePadding="10dp" />
+                android:inputType="textEmailAddress"
+                android:drawablePadding="10dp"
+                android:maxLength="31"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/main_txtinput_age"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            app:errorEnabled="true"
             android:hint="@string/age"
-            app:endIconMode="clear_text">
+            app:endIconMode="clear_text"
+            app:counterEnabled="true"
+            app:counterMaxLength="2">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/main_age"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_calendar"
-                android:drawablePadding="10dp" />
+                android:inputType="numberDecimal"
+                android:drawablePadding="10dp"
+                android:maxLength="3"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -87,12 +107,14 @@
                 android:textStyle="bold" />
 
             <RadioGroup
+                android:id="@+id/main_radioGroup_gender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/main_radioButton_male"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
@@ -100,6 +122,7 @@
                     android:textSize="15sp" />
 
                 <RadioButton
+                    android:id="@+id/main_radioButton_female"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/female"
@@ -107,6 +130,14 @@
             </RadioGroup>
 
         </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/main_rememberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/remember_me"
+            android:textColor="@color/colorPrimary"/>
 
         <Button
             android:id="@+id/btn_main_next"

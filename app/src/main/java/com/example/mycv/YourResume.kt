@@ -1,6 +1,7 @@
 package com.example.mycv
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -17,7 +18,8 @@ import com.example.mycv.Fragments.FragmentSkills
 
 class YourResume : AppCompatActivity()
 {
-
+    private lateinit var mPreferences: SharedPreferences
+    private lateinit var mEditor: SharedPreferences.Editor
 
 
     override fun onCreate(savedInstanceState: Bundle?)
@@ -28,6 +30,11 @@ class YourResume : AppCompatActivity()
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         toolbar.setTitle("Your Resume")
         setSupportActionBar(toolbar)
+
+
+// Init
+        mPreferences = getSharedPreferences("prefs", MODE_PRIVATE)
+        mEditor = mPreferences.edit()
 
         openFragment(FragmentSkills())
 
@@ -47,16 +54,6 @@ class YourResume : AppCompatActivity()
             startActivity(Intent(this, MyCareer::class.java))
         }
 
-        val alert = AlertDialog.Builder(this)
-        alert.setTitle("Logout")
-        alert.setPositiveButton(android.R.string.yes) { dialog, which ->
-            Toast.makeText(applicationContext,
-                android.R.string.yes, Toast.LENGTH_SHORT).show()
-        }
-        alert.setNeutralButton("NO") { dialog, which ->
-            Toast.makeText(applicationContext,
-                "Maybe", Toast.LENGTH_SHORT).show()
-        }
     }
 
     private fun openFragment(fragment: Fragment)
@@ -76,18 +73,19 @@ class YourResume : AppCompatActivity()
         {
             R.id.menu_logout -> {
                 val alert = AlertDialog.Builder(this)
-                alert.setTitle("Logout")
-                alert.setMessage("Are you sure you want to logout ?")
-                alert.setPositiveButton("Yes") { dialog, which ->
-                    android.widget.Toast.makeText(
-                        applicationContext,
-                        android.R.string.yes, android.widget.Toast.LENGTH_SHORT
-                    ).show()
+                alert.setTitle(R.string.logout)
+                alert.setMessage(R.string.Are_you_sure_you_want_to_logout)
+                alert.setPositiveButton(R.string.yes) { dialog, which ->
+                    //mEditor.putBoolean("isConnected", false)
+                    mEditor.remove("isConnected")
+                    mEditor.commit()
+                    startActivity(Intent(this, MainActivity::class.java))
+                    finishAffinity()
                 }
-                alert.setNegativeButton("No") { dialog, which ->
+                alert.setNegativeButton(R.string.no) { dialog, which ->
                     android.widget.Toast.makeText(
                         applicationContext,
-                        "Maybe", android.widget.Toast.LENGTH_SHORT
+                        R.string.logout_canceled, android.widget.Toast.LENGTH_SHORT
                     ).show()
                 }
                 alert.show()

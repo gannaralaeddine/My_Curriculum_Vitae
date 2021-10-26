@@ -87,5 +87,13 @@
                 android:drawablePadding="10dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <Button
+            android:id="@+id/btn_addEducation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/save"/>
+
     </LinearLayout>
 </ScrollView>

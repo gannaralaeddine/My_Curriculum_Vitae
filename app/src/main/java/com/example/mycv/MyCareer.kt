@@ -30,7 +30,7 @@ class MyCareer : AppCompatActivity()
         setContentView(R.layout.activity_my_career)
 
         val toolbar1 = findViewById<Toolbar>(R.id.toolbar1)
-        toolbar1.setTitle("Your Careerrrr")
+        toolbar1.setTitle("Your Career")
         setSupportActionBar(toolbar1)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 

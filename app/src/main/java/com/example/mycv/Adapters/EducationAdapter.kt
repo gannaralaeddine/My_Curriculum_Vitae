@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mycv.Model.Education
 import com.example.mycv.R
 
-class EducationAdapter(val listEducations: List<Education>): RecyclerView.Adapter<EducationAdapter.EducationViewHolder>()
+class EducationAdapter(var listEducations: List<Education>): RecyclerView.Adapter<EducationAdapter.EducationViewHolder>()
 {
 
     class EducationViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
@@ -37,4 +37,10 @@ class EducationAdapter(val listEducations: List<Education>): RecyclerView.Adapte
     }
 
     override fun getItemCount(): Int = listEducations.size
+
+    fun setData(educations: List<Education>)
+    {
+        this.listEducations = educations
+        notifyDataSetChanged()
+    }
 }
